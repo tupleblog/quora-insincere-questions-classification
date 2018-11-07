@@ -46,7 +46,7 @@ class QuoraQuestionClassifier(Model):
                 target: torch.LongTensor = None) -> Dict[str, torch.Tensor]:
         embedded_question = self.text_field_embedder(question_text)
         question_mask = get_text_field_mask(question_text)
-        encoded_question = self.sentence_encoder(embedded_question, question_mask)
+        encoded_question = self.question_encoder(embedded_question, question_mask)
 
         logits = self.classifier_feedforward(encoded_question)
         class_probabilities = F.softmax(logits, dim=-1)
