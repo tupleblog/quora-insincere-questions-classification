@@ -50,8 +50,7 @@ class QuoraQuestionClassifier(Model):
 
         logits = self.classifier_feedforward(encoded_question)
         class_probabilities = F.softmax(logits, dim=-1)
-        predictions = class_probabilities.cpu().data.numpy()
-        argmax_indices = np.argmax(predictions, axis=-1)
+        argmax_indices = np.argmax(class_probabilities.cpu().data.numpy(), axis=-1)
         labels = [self.vocab.get_token_from_index(x, namespace='labels')
                   for x in argmax_indices]
         
