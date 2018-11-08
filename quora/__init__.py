@@ -1,2 +1,3 @@
 from quora.quora_dataset import QuoraDatasetReader
 from quora.quora_classifier import QuoraQuestionClassifier
+from quora.quora_predictor import QuoraQuestionPredictor
