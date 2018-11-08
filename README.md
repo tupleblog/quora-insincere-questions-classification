@@ -5,7 +5,7 @@ Code for Kaggle competition [here](https://www.kaggle.com/c/quora-insincere-ques
 
 ## Prepare dataset
 
-Put `train.csv.zip` in this folder and run `python kfold_validation_data.py` to generate K-folds dataset 
+Put `train.csv.zip` in this folder and run `python kfold_validation_data.py` to generate K-folds dataset and experiments file
 
 
 ## Run all models
